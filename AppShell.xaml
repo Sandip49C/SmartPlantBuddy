@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:views="clr-namespace:SmartPlantBuddy.Views"
+    x:Class="SmartPlantBuddy.AppShell">
+
+    <TabBar>
+        <Tab Title="Home" Icon="home.png">
+            <ShellContent ContentTemplate="{DataTemplate views:DashboardPage}" />
+        </Tab>
+        <Tab Title="History" Icon="history.png">
+            <ShellContent ContentTemplate="{DataTemplate views:HistoryPage}" />
+        </Tab>
+        <Tab Title="Alerts" Icon="bell.png">
+            <ShellContent ContentTemplate="{DataTemplate views:AlertsPage}" />
+        </Tab>
+    </TabBar>
+
+</Shell>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="SmartPlantBuddy.Views.AlertsPage"
+             Title="Alerts &amp; Controls">
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="25">
+            <Label Text="Alerts &amp; Controls" 
+                   FontSize="28" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" />
+
+            <Border BackgroundColor="#FFEEEE" 
+                    Stroke="#FF9999" 
+                    StrokeThickness="2" 
+                    Padding="20">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="15" />
+                </Border.StrokeShape>
+                <Label Text="Low Moisture Detected!" 
+                       FontSize="20" 
+                       TextColor="Red" 
+                       FontAttributes="Bold" />
+            </Border>
+
+            <Button Text="Send Test Alert" 
+                    BackgroundColor="Black" 
+                    TextColor="White" 
+                    CornerRadius="25"
+                    HeightRequest="60"
+                    Command="{Binding SendTestAlertCommand}" />
+
+            <Label Text="Auto-Watering System: OFF" 
+                   FontSize="16" 
+                   HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

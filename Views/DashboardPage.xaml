@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="SmartPlantBuddy.Views.DashboardPage">
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="30">
+            <Label Text="Smart Plant Buddy" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center" />
+
+            <Border BackgroundColor="#F5F5F5" Padding="50" StrokeThickness="0">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="120" />
+                </Border.StrokeShape>
+                <Border.Shadow>
+                    <Shadow Brush="Black" Offset="0,2" Radius="4" Opacity="0.3" />
+                </Border.Shadow>
+                <VerticalStackLayout HorizontalOptions="Center">
+                    <Label Text="{Binding CurrentMoisture, StringFormat='{0:F0}%'}" FontSize="72" FontAttributes="Bold" />
+                    <Label Text="Soil Moisture" FontSize="18" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Label Text="{Binding CurrentTemp, StringFormat='{0:F0}°F'}" FontSize="48" HorizontalOptions="Center" />
+            <Label Text="Current Temp" HorizontalOptions="Center" />
+
+            <Button Text="Water Now" BackgroundColor="Black" TextColor="White"
+                    CornerRadius="30" HeightRequest="60" Command="{Binding WaterNowCommand}" />
+
+            <Button Text="View History" Command="{Binding GoToHistoryCommand}" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
